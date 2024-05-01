@@ -1,0 +1,185 @@
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    img_perfil VARCHAR(255),
+    nome VARCHAR(150),
+    email VARCHAR(150),
+    data_nascimento DATE,
+    proficiencia ENUM('iniciante', 'intermediario', 'avancado'),
+    objetivos TEXT,
+    forma_aprendizado ENUM('presencial', 'online'),
+    data_registro DATETIME
+);
+
+###################
+$msg = false;
+if(isset($_FILES['img_perfil'])){
+    // Obtém a extensão do arquivo
+    $extensao = strtolower(pathinfo($_FILES['img_perfil']['name'], PATHINFO_EXTENSION));
+    // Gera um novo nome único para o arquivo usando a função md5 e o timestamp atual
+    $novo_nome = md5(uniqid(time())) . '.' . $extensao;
+    // Define o diretório de destino para salvar a imagem
+    $pasta_img_perfil = "pasta_img_perfil/";
+
+    // Verifica se o arquivo foi movido com sucesso para a pasta de destino
+    if(move_uploaded_file($_FILES['img_perfil']['tmp_name'], $pasta_img_perfil.$novo_nome)){
+        $msg = "Arquivo enviado e registrado no banco de dados";
+
+        // Insere o novo nome do arquivo na tabela de usuários
+        $sql_code = "INSERT INTO usuarios (img_perfil) VALUES ('$novo_nome')";
+        if(!$mysqli->query($sql_code)){
+            $msg .= " mas falhou ao registrar no banco de dados";
+        }
+    } else {
+        $msg = "Falha ao enviar a imagem";
+    }
+}
+
+if($msg !== false){
+    echo "<p>$msg</p>";
+}
+
+##############################
+include 'conexao.php';
+
+$msg = false;
+if(isset($_FILES['img_perfil'])){
+  $extensao = strtolower(substr($_FILES['img_perfil']['name'], -4));
+  $novo_nome = md5(time()) . $extensao;
+
+  $pasta_img_perfil = "pasta_img_perfil/";
+
+  if(move_uploaded_file($_FILES['img_perfil']['tmp_name'], $pasta_img_perfil.$novo_nome)){
+    $msg = "Arquivo enviado";
+  } else {
+    $msg = "Falha ao enviar a imagem";
+  }
+
+  // Inserir o nome do arquivo na tabela de usuarios
+  $sql_code = "INSERT INTO usuarios (img_perfil) VALUES ('$novo_nome')";
+
+  if($mysqli->query($sql_code)) {
+    $msg .= " e registrado no banco de dados";
+  } else {
+    $msg .= " mas falhou ao registrar no banco de dados";
+  }
+}
+
+if($msg !== false) {
+  echo "<p>$msg</p>";
+}
+
+########forma antiga
+<?php
+// Inclui o arquivo de conexão
+include 'conexao.php';
+
+$msg = false;
+
+// Verifica se o formulário foi submetido
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verifica se foi enviado um arquivo de imagem
+    if(isset($_FILES['img_perfil'])){
+        $extensao = strtolower(substr($_FILES['img_perfil']['name'], -4));
+        // Define um novo nome único para a imagem
+        $novo_nome = md5(time() . $extensao); // Gera nomes diferentes
+        // Define o diretório para salvar as imagens
+        $pasta_img_perfil = "pasta_img_perfil/";
+
+        // Move o arquivo temporário para o diretório de destino
+        if(move_uploaded_file($_FILES['img_perfil']['tmp_name'], $pasta_img_perfil.$novo_nome)){
+            // Insere o nome da imagem na tabela de usuários
+            $sql_code = "INSERT INTO usuarios (img_perfil) VALUES ('$novo_nome')";
+            if($mysqli->query($sql_code)){
+                $msg = "Arquivo enviado e registrado no banco de dados";
+            } else {
+                $msg = "Falha ao registrar a imagem no banco de dados";
+            }
+        } else {
+            $msg = "Falha ao enviar a imagem";
+        }
+    }
+
+    // Prepara os dados do formulário para inserção no banco de dados
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $data_nascimento = $_POST['data_nascimento'];
+    $proficiencia = $_POST['proficiencia'];
+    $objetivos = $_POST['objetivos'];
+    $forma_aprendizado = $_POST['forma_aprendizado'];
+    $data_registro = date('Y-m-d H:i:s'); // Data e hora atual
+    
+    // Prepara a declaração SQL para inserir os dados na tabela usuarios
+    $sql = "INSERT INTO usuarios (nome, email, data_nascimento, proficiencia, objetivos, forma_aprendizado, data_registro) 
+            VALUES ('$nome', '$email', '$data_nascimento', '$proficiencia', '$objetivos', '$forma_aprendizado', '$data_registro')";
+    
+    if ($mysqli->query($sql) === TRUE) {
+        $msg .= " | Novo registro inserido com sucesso.";
+    } else {
+        $msg .= " | Erro ao inserir registro: " . $mysqli->error;
+    }
+}
+
+if($msg !== false){
+    echo "<p>$msg</p>";
+}
+?>
+
+
+##################################Forma melhor
+<?php
+// Inclui o arquivo de conexão
+include 'conexao.php';
+
+$msg = false;
+
+// Verifica se o formulário foi submetido
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Verifica se foi enviado um arquivo de imagem
+    if(isset($_FILES['img_perfil'])){
+        $extensao = strtolower(substr($_FILES['img_perfil']['name'], -4));
+        // Define um novo nome único para a imagem
+        $novo_nome = md5(time() . $extensao); // Gera nomes diferentes
+        // Define o diretório para salvar as imagens
+        $pasta_img_perfil = "pasta_img_perfil/";
+
+        // Move o arquivo temporário para o diretório de destino
+        if(move_uploaded_file($_FILES['img_perfil']['tmp_name'], $pasta_img_perfil.$novo_nome)){
+            // Insere o nome da imagem na tabela de usuários
+            $sql_code = "INSERT INTO usuarios (img_perfil) VALUES ('$novo_nome')";
+            if($mysqli->query($sql_code)){
+                $msg = "Arquivo enviado e registrado no banco de dados";
+            } else {
+                $msg = "Falha ao registrar a imagem no banco de dados";
+            }
+        } else {
+            $msg = "Falha ao enviar a imagem";
+        }
+    }
+
+    // Prepara os dados do formulário para inserção no banco de dados
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $data_nascimento = $_POST['data_nascimento'];
+    $proficiencia = $_POST['proficiencia'];
+    $objetivos = $_POST['objetivos'];
+    $forma_aprendizado = $_POST['forma_aprendizado'];
+    $data_registro = date('Y-m-d H:i:s'); // Data e hora atual
+    
+    // Prepara a declaração SQL para inserir os dados na tabela usuarios
+    $sql = "INSERT INTO usuarios (nome, email, data_nascimento, proficiencia, objetivos, forma_aprendizado, data_registro) 
+            VALUES ('$nome', '$email', '$data_nascimento', '$proficiencia', '$objetivos', '$forma_aprendizado', '$data_registro')";
+    
+    if ($mysqli->query($sql) === TRUE) {
+        $msg .= " | Novo registro inserido com sucesso.";
+    } else {
+        $msg .= " | Erro ao inserir registro: " . $mysqli->error;
+    }
+}
+
+if($msg !== false){
+    echo "<p>$msg</p>";
+}
+?>
+
+
+

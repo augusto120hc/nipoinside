@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+/* CADASTRO */
+
+form {
+  box-shadow: 2px 3px 4px 3px #00696c91;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.label {
+  margin-bottom: 5px;
+}
+.label-login {
+  margin-bottom: 20px;
+}
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #00686c;
+  font-size: 14px;
+}
+
+input[type="date"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Fundo Cadastro */
+#form_cadastro {
+  margin-top: 5%;
+  margin-bottom: 3%;
+}
+#fundo-cadastro {
+  background: linear-gradient(125deg, #00776f, #f1db7ac4, #00776f, #f1dc7a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* fundo Login */
+#fundo-login {
+  background: linear-gradient(125deg, #00776f, #f1db7ac4, #00776f, #f1dc7a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Tirar a borda do focus */
+input[type="date"]:focus {
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #00696c7e;
+  box-sizing: border-box;
+  outline: none;
+  margin-bottom: 15px;
+}
+label{
+  display: none;
+}
+.file-upload {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: #8abff5;
+  color: #212529;
+}
+
+.file-upload input[type='file'] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+/* TELA de Login */
+
+#btn-entrar-login,
+#btn-registrar {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #00686c;
+  box-sizing: border-box;
+  color: #fad928;
+  background-color: #00686c;
+  cursor: pointer;
+}
+#btn-cadastre-se {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #00696c75;
+  box-sizing: border-box;
+  color: #00686c;
+  /* background-color: #fad928; */
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#btn-entrar-login:hover,
+#btn-registrar:hover {
+  color: #fad928;
+  background-color: #01998f;
+}
+#btn-cadastre-se:hover {
+  color: #fad928;
+  background-color: #01998f;
+}
+
+textarea {
+  height: 60px;
+  resize: none;
+}
+.forma-aprendizado {
+  display: flex;
+  align-items: center;
+}
+
+.forma-aprendizado label {
+  margin-right: 10px;
+}
+
+.forma-aprendizado input[type="radio"] {
+  margin-right: 5px;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.login-button a,
+.nav-list a {
+  text-decoration: none;
+  color: #32c2b8d5;
+  font-size: 1.2em;
+  transition: all 200ms ease;
+}
+.nav-list a:hover {
+  color: #fad928;
+}

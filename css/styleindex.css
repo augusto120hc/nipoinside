@@ -1,0 +1,3219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+a {
+  text-decoration: none;
+}
+
+/* Menu Hamburger */
+.menu {
+  position: fixed;
+  top: -50%; /* Esconde o menu inicialmente acima do topo da tela */
+  right: 0;
+  width: 100%;
+  height: 40%;
+  background-color: #00686c;
+  padding-top: 60px; /* Altura do cabeçalho (ajuste conforme necessário) */
+  transition: top 0.3s ease; /* Adiciona um efeito de transição suave */
+  z-index: 4;
+  display: none;
+}
+
+.menu ul {
+  padding: 0;
+  list-style: none;
+  z-index: 10;
+}
+
+.menu li {
+  padding: 8px;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  /* Adiciona um efeito de transição suave */
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  color: #e1ff35;
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked + .hamburger + .menu {
+  top: 0; /* Mostra o menu quando a caixa de seleção está marcada */
+}
+
+/*  Header NAV  */
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: #00686c;
+  height: 10vh;
+}
+.login-button button {
+  border: none;
+  background-color: #fad928;
+  color: #00686c;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+.login-button button:hover {
+  color: #e4e114;
+  background-color: #00686c;
+  padding: 5px 15px;
+  margin: -1px;
+  border: solid 1px #e4e114;
+}
+/* Botao do NAV para mobile*/
+.mobile-menu-icon {
+  display: none;
+}
+.mobile-menu {
+  background-color: #00686c;
+  display: none;
+}
+.nav-list ul {
+  display: flex;
+  list-style: none;
+}
+.nav-list li {
+  letter-spacing: 1px;
+  margin-left: 20px;
+}
+
+.login-button a,
+.nav-list a {
+  text-decoration: none;
+  color: #32c2b8d5;
+  font-size: 1.2em;
+  transition: all 200ms ease;
+}
+.nav-list a:hover {
+  color: #fad928;
+}
+
+/*main container*/
+main.container {
+  width: 100%;
+}
+
+/* imagem de CAPA */
+.banner img {
+  width: 100%;
+}
+.banner {
+  position: relative;
+}
+#banner-mobile {
+  display: none;
+}
+
+.texto-banner {
+  position: absolute;
+  top: 30%;
+  width: 20%;
+  right: 8%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(225, 225, 225, 0.5);
+  text-align: center;
+}
+.texto-banner a {
+  color: #00686c;
+  text-decoration: none;
+  font-size: 4vw;
+}
+.texto-banner a:hover {
+  color: #fad928;
+}
+/* .texto-banner a {
+  font-size: 1vw;
+  text-decoration: none;
+  font-weight: 900;
+} */
+div.texto-ergoproxy p:nth-of-type(3) {
+  color: rgb(255, 36, 244);
+  font-size: 16px;
+}
+.frase-banner {
+  display: flex;
+  position: absolute;
+  top: 60%;
+  width: 40%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(225, 225, 225, 0);
+  text-align: center;
+  background-color: #014d504b;
+  align-items: center;
+  text-align: center;
+}
+
+.texto-banner {
+  color: #05979c;
+  font-size: 2.2vw;
+}
+h1.texto-banner.frase-banner {
+  justify-content: center;
+  color: #ffdc42;
+  line-height: 1;
+  font-family: "Lemon";
+  height: 22%;
+}
+.figura-banner {
+  position: absolute;
+  top: 49%;
+  background-color: #8585858c;
+  height: 97%;
+  width: 18%;
+  right: 65%;
+  transform: translate(-50%, -50%);
+  color: #00686c;
+  font-size: 54px;
+  text-align: center;
+}
+
+/*Cards tranparentes no banner capa*/
+
+/* link dos cards hiragana */
+.card-2 a:hover, .card-3 a:hover {
+  background-color: #16bec4;
+}
+/*Cor do texto cards*/
+.card h2 {
+  color: #055457;
+}
+.cards {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.card-body {
+  margin-top: -100px;
+}
+.card-body h2 {
+  width: 240px;
+}
+.card-body h2 {
+  color: #00686c;
+}
+section.card {
+  height: 50px;
+
+}
+
+/* CARDS hiragana Katakana Kanji*/
+aside.cards section.card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #32c2b8d5;
+  border-radius: 5px;
+  width: 10%;
+  box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+  padding: 150px 140px;
+  z-index: 3;
+  margin-top: -8%;
+  transition: box-shadow 0.2s ease; /* Adiciona uma transição suave */
+}
+
+aside.cards section.card:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); /* Ajusta a sombra ao passar o mouse */
+  background: #5debe1d5;
+  /* background: #23a199d5; */
+  cursor: pointer;
+}
+aside.cards section.card:first-child:hover {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5); /* Ajusta a sombra ao passar o mouse */
+  cursor: pointer;
+  background-color: #fada28e7;
+  /* background-color: #ddbd08b6;  */
+  margin-left: 0;
+
+}
+
+aside.cards section.card:first-child {
+  background-color: #fada28b6;
+  margin-left: 0;
+  width: 10%;
+  transition: box-shadow 0.2s ease;
+}
+.cards {
+  gap: 2%;
+}
+.aside-card {
+  margin: 0 auto;
+  gap: 5px;
+}
+
+aside.cards section.card h2 {
+  margin: 16px 45px;
+  font-size: 100%;
+  margin: 6px;
+}
+/*Primeiro card*/
+
+.hiragana {
+  /* Estilo do texto dos cards*/
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 0.2rem;
+  padding-top: 1px;
+  margin-top: 1px;
+}
+
+.card-3 .r {
+  font-size: 18px;
+  font-weight: 400;
+  width: 30px;
+  height: 30px;
+  background-color: #fcfcfc;
+  border-radius: 50%;
+}
+/* terceiro card */
+.card-body p {
+  font-size: 16px;
+  color: #00686c;
+  font-weight: bold;
+}
+
+/*  figura no topo das paginas */
+.card-body img {
+  width: 32%;
+}
+
+/*Card footer*/
+/* Link dos CARDS */
+.veja-a{
+  color: #00686c;
+}
+
+.hira-footer{
+  color: #fad928;
+  font-weight: 600;
+  background-color: #19ada4;
+}
+/* .card-footer-1:hover{
+  background-color: #d3b71c;
+} */
+
+.hira-footer{
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  color: #fad928;
+  font-weight: 600;
+  background-color: #19ada4;
+  box-shadow: 0 6px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.212);
+  border-radius: 50px;
+  padding: 15px 100px 10px 100px;
+  justify-content: center;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+.hira-footer:hover{
+  color: #fad928;
+  font-weight: 600;
+  background-color: #13857d;
+  color: #fdfff2;
+  margin-top: 24px;
+  margin-bottom: -10px !important;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.212);
+}
+
+.card-footer-3 a,
+.card-footer-2 a {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  color: #00776f;
+  font-weight: 600;
+  background-color: #f7db3f;
+  border-radius: 50px;
+  padding: 15px 100px 10px 100px;
+  margin-top: 8px;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1), inset 0 -4px 0 rgba(0, 0, 0, 0.212);
+  transition: 0.3s ease;
+}
+.card-footer-2 a:hover{
+  background-color: #f7db3f;
+  margin-top: 13px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.212);
+}
+.card-footer-3 a:hover{
+  background-color: #f7db3f;
+  margin-top: 13px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.212);
+}
+
+.card-footer-3,
+.card-footer-2{
+  margin-top: 10px;
+  transition: 0.2s ease;
+  
+}
+
+/* Container de 3 Textos*/
+
+#secao-index {
+  justify-content: center; /* Centralizar horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  /* margin-top: 90px;
+  margin-bottom: 120px; */
+  gap: 20px;
+}
+
+.container-link {
+  height: 180px;
+  margin: 0 auto;
+}
+.container-link p {
+  color: #636363;
+}
+.link-texto {
+  color: #636363;
+  text-indent: 0;
+  font-size: 14px;
+}
+
+.first-letter-styling::first-letter {
+  font-size: 45px; /* Tamanho de fonte para a primeira letra */
+  color: #05979c; /* Cor da primeira letra */
+  font-weight: bold; /* Estilo de fonte para a primeira letra */
+}
+.saiba {
+  margin-top: -24px;
+  float: right;
+}
+.saiba a {
+  font-size: 14px;
+  background-color: #05979c;
+  width: 90px;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+/* CAPA   livro */
+.capa-span {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  border: 1px solid #a1a1a1;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  width: 40%;
+  margin: 15px auto;
+  justify-content:space-between;
+  background-color: #f8ffff;
+  border-radius: 6px;
+  padding: 10px;
+  gap: 5px;
+}
+.capa-span a{
+  background-color: #e2f0ff;
+ padding: 10px;
+}
+.baixa-livro{
+ 
+}
+.capa-span p{
+  color: #00686c;
+}
+.capa-livro img{
+  display: flex;
+  width: 160px;
+  float: left;
+}
+.capa-livro {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.lupa {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.5); /* Cor de fundo da lupa */
+  display: none; /* Inicialmente oculta */
+  pointer-events: none; /* Para evitar que a lupa capture eventos de mouse */
+  border-radius: 50%; /* Para tornar a lupa circular */
+}
+
+.lupa img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 230%;
+  height: 230%;
+  object-fit: none; /* Para manter a proporção da imagem */
+  object-position: 50% 50%; /* Posiciona a imagem no centro da lupa */
+  transform: translate(-50%, -50%); /* Centraliza a imagem dentro da lupa */
+}
+
+
+
+/*Conteudo dos tres boxes*/
+/*  */
+.container-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border: 1px solid #ccc;
+  margin: auto;
+  margin-bottom: 12px;
+  
+}
+.container-box:hover{
+  background-color: #dae0ff62;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 5px rgb(123, 213, 255); 
+}
+.container-box h3 {
+  margin-bottom: -5px;
+}
+
+.img-totoro {
+  height: 100%;
+}
+.box-um {
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 50%;
+}
+.box-dois {
+  width: 50%;
+  padding: 0px;
+}
+.box-dois img {
+  padding: -10px;
+}
+.iconeplay {
+  text-align: center;
+}
+#btn-verbos {
+  float: right;
+}
+
+/*box um - frases com audio*/
+.box-um h3 {
+  color: #32c2b9;
+  font-size: 12px;
+}
+.box-um p {
+  font-size: 14px;
+  line-height: 1.7em;
+  text-align: center;
+  color: #636363;
+}
+.btnergoproxyMostrar {
+  z-index: 5;
+}
+/* banner ergoproxy */
+.banner-ergoproxy {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+.banner-ergoproxy img {
+  width: 100%;
+}
+.banner-evangelion {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.banner-evangelion img {
+  width: 100%;
+}
+
+.texto-ergoproxy-pdois {
+  color: #0000c0;
+}
+.gif-estudar-index img {
+  width: 100%;
+}
+
+/* Topico verbos radius */
+.verbos-radius-index {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Colunas automáticas com largura mínima de 250px */
+  margin: 20px; /* Espaçamento entre os itens */
+  justify-items: center; /* Centralizar os itens horizontalmente */
+  align-items: center; /* Centralizar os itens verticalmente */
+}
+
+.topico-radius {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid #ff00ffa8;
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+}
+.topico-radius:hover {
+  width: 225px;
+  height: 225px;
+  margin: -5px;
+  padding: -10px;
+  background-color: #00686c;
+  color: #fff;
+}
+.topico-radius:hover p {
+  color: #fff;
+}
+.radius-p1,
+.radius-p2,
+.radius-p3,
+.radius-p4 {
+  color: rgb(1, 133, 115);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.7vw;
+  line-height: 1.5;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* H1 */
+.title-verbos-radius-index {
+  color: #fff;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 22px;
+  height: 40px;
+  background-color: #00686c;
+  line-height: 40px;
+}
+/* benner Samurai x */
+.banner-samurai-x img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* .banner-samurai-x {
+  position: relative;
+  width: 100%;
+  height: 300px; 
+  overflow: hidden;
+} */
+.banner-samurai-x {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Defina a altura desejada para o banner */
+  overflow: hidden;
+  background-image: url("../img/banner/banner-samurai-x02.jpg"); /* Substitua pelo caminho para a sua imagem de fundo */
+  background-size: cover; /* Garante que a imagem cubra todo o espaço */
+  background-position: center; /* Centraliza a imagem de fundo */
+}
+.imagem-de-fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.card-samurai {
+  position: relative;
+  display: flex;
+  top: 20%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.circulo-imagem {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 10px;
+  border: solid 3px #ffd000;
+}
+
+.imagem-circulo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* balao de explicação*/
+.balao-naruto {
+  cursor: pointer;
+}
+.balao-container {
+  position: relative;
+  display: inline-block;
+}
+
+.balao {
+  width: 200px;
+  display: none;
+  position: absolute;
+  top: 50px; /* Definindo a posição vertical do balão */
+  background-color: #32c2b8d5;
+  font-size: 13px;
+  border: 1px solid #ccc;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 5;
+}
+.balao video {
+  width: 180px;
+  height: 180px;
+  margin-top: -25px;
+}
+/* Fim balao explicação */
+/* Cards circulos banner samurai x */
+.img-radius {
+  background-image: url("..img/img-index/basilisk.png");
+}
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 920px) {
+  .box-um p {
+    font-size: 13px;
+  }
+}
+/*  */
+@media screen and (max-width: 967px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+  }
+  /* aside.cards section.card-3 {
+    margin-top: -15px;
+    margin-bottom: 15px;
+  } */
+
+  /* .box-um p {
+    font-size: 10px;
+  } */
+  /* TEXTOS 3 BANNER central index */
+.box-um h3 {
+  color: #32c2b9;
+  font-size: 1.9vw;
+}
+  #secao-index {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    /* gap: 5em; */
+    width: 90%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+
+  }
+
+  .container-link {
+    grid-row: 1;
+  }
+  .link-final {
+    grid-row: 3;
+    margin-top: -4em;
+    margin-bottom: 4em;
+  }
+
+  .container-box {
+    width: 98%;
+  }
+  /* Div Verbos */
+  .div-verbos {
+    width: 100%;
+  }
+  .verbo-index {
+    width: 100%;
+  }
+
+  .cards section.card-2 {
+    margin-bottom: 20px;
+  }
+  .cards section.card-1 {
+    margin-bottom: 20px;
+  }
+  /* CAPA   livro */
+.capa-span {
+  /* display: flex;
+  justify-content: center; 
+  align-items: center; 
+  border: 1px solid #a1a1a1;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); */
+  width: 60%;
+  margin: 15px auto;
+  justify-content:space-between;
+  background-color: #f8ffff;
+  border-radius: 6px;
+  padding: 10px;
+  gap: 5px;
+  margin-top: -10px;
+}
+.capa-span a{
+  background-color: #e2f0ff;
+ padding: 10px;
+}
+.baixa-livro{
+ 
+}
+.capa-span p{
+  color: #00686c;
+}
+.capa-livro img{
+  display: flex;
+  width: 160px;
+  float: left;
+}
+.capa-livro {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+}
+/* Página CARDS  ################### */
+
+
+.seta-baixo-gif p,
+.seta-baixo-gif img {
+  display: inline-block; /* Define os elementos como blocos em linha */
+  vertical-align: middle;
+  margin-left: 30px;
+}
+/* Animação da seta frases */
+.seta-baixo-gif img {
+  animation: balanco-horizontal 0.7s infinite alternate;
+}
+@keyframes balanco-horizontal {
+  0% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+.seta-baixo-gif img {
+  width: 20px;
+  height: 15px;
+}
+.seta-baixo-gif p {
+  font-size: 15px;
+}
+.seta-baixo-gif {
+  display: flex;
+  align-items: center;
+}
+.box-um em {
+  color: #000;
+  font-size: 0.8em;
+  margin-left: 35%;
+}
+.vermelho {
+  color: #ff0000;
+  text-align: center;
+}
+.verde {
+  color: #008000;
+}
+.verde-lima {
+  color: #4dbb4d;
+}
+.azul {
+  color: #8484ff;
+}
+.rosa {
+  color: #ff00ff;
+}
+#roxo {
+  color: #8b008b;
+}
+.roxo {
+  color: #8b008b;
+}
+
+/*  Botão ver mais verbos no index*/
+.btn-ver-mais a {
+  font-size: 14px;
+}
+.btn-ver-mais {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.hr {
+  width: 70%; 
+  margin: 0 auto; 
+  border: none; /* Remova a borda padrão */
+  background-color: #abc8ff; 
+  height: 1px; /* Defina a altura da linha */
+}
+
+section.btn-ver-mais .btn {
+  display: flex;
+  padding: 5px 20px;
+  line-height: 30px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #007bff;
+  border: 1px solid #007bff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 2px rgba(0, 0, 0, 0.1), inset 0 -6px 0 rgba(0, 0, 0, 0.212);
+  transition: all 0.2s ease;
+}
+
+section.btn-ver-mais .btn:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  margin-top: 3px;
+  margin-bottom: -3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.212);
+}
+
+section.btn-ver-mais .btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5), inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+/* fim 3 boxes - index */
+
+/* SEção Index cards números */
+
+.secao-03-numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+  padding: 10px;
+  margin: 0 20px;
+  margin-top: 10px;
+}
+
+.secao-03-numeros-index {
+  margin: 0 60px;
+}
+/* Cards página frases */
+.secao-pagina-frases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 5px;
+  padding: 0px;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 95%;
+}
+.img-frases {
+  display: block;
+  margin-left: 20%;
+  margin-top: 80px;
+}
+.secao-profissao-cards {
+  margin: 0 60px;
+}
+
+.secao-numero-index {
+  border: solid 1px #dbdbdb;
+  /* background-color: #d1d1d170; */
+  border-radius: 8px;
+  box-shadow: 1px 0px 3px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.secao-numero-index:hover{
+  box-shadow: 0px 0px 8px 0px rgba(22, 184, 196, 0.582);
+}
+.secao-anime-index:hover{
+  box-shadow: 0px 0px 8px 0px rgba(196, 22, 173, 0.897);
+}
+.head-card-anime {
+  line-height: 20px;
+}
+.secao-anime-index {
+  background-color: #00686c;
+}
+.branco-title {
+  font-size: 16px;
+}
+
+/* Secao Profissão */
+.secao-profisssao-index {
+  background-color: #00776f;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.head-card-anime {
+  line-height: 20px;
+}
+.profissao-index {
+  border: #00a100;
+  background-color: #464646;
+}
+.branco-title {
+  font-size: 16px;
+}
+
+/* .secao-03-numeros p:first-child {
+  font-weight: 600;
+} */
+.secao-03-numeros p {
+  font-size: 14px;
+  color: #ffdc42;
+}
+/*PAGNA cards categorias*/
+
+.container-card-categoria h2 {
+  color: #00686c;
+}
+/* Página cards */
+
+figure.iconeCalendario img,
+figure.iconeCores img {
+  display: flex;
+  justify-content: center;
+  width: 70px;
+  margin: 0 auto;
+}
+
+/* CARDS cores  */
+.container-card-categoria {
+  display: flex;
+  grid-template-columns: 1fr 1fr 1fr; /* Divide o container em três colunas de largura igual */
+  /* Espaçamento entre as colunas */
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.card-vermelho,
+.card-preto,
+.card-azul,
+.card-branco,
+.card-amarelo,
+.card-marron,
+.card-verde,
+.card-cinza,
+.card-laranja,
+.card-dourado,
+.card-roxo,
+.card-prateado,
+.card-rosa,
+.card-bege {
+  border: solid #c5c5c5 1px;
+  box-shadow: 0px 1px 5px 1px #7575756e;
+
+  width: 80%;
+  text-align: center;
+
+  border-radius: 5px;
+  color: #4d4d4d;
+  padding: 1%;
+}
+
+/* CARD MESES*/
+.card-linha p {
+  font-size: 14px;
+}
+.card-mes,
+.card-semana {
+  border: solid #c5c5c5 1px;
+  box-shadow: 0px 1px 5px 1px #7575756e;
+  width: 50%;
+  text-align: center;
+  border-radius: 5px;
+  color: #00686c;
+}
+div.card-linha {
+  margin: 5px;
+  gap: 10px;
+}
+.card-mes {
+  padding: 2%;
+  width: 70%;
+}
+
+.card-semana {
+  padding: 1%;
+}
+/* PLAY do card */
+#playCard {
+  display: flex;
+  position: absolute;
+  margin-top: -15px;
+}
+.playCardMeses {
+  margin-top: 2px !important;
+}
+.play-menor {
+  margin-top: 25px;
+}
+.card-vermelho {
+  color: #ca0000;
+}
+.card-amarelo {
+  color: #f9fd00;
+}
+.branco {
+  color: #ffffff;
+}
+.cinza {
+  color: #dadada;
+}
+#cinza-escuro {
+  color: #4b4b4b;
+}
+.cinza-escuro {
+  color: #4b4b4b;
+}
+#amarelonaruto {
+  color: #ffdc42;
+}
+#amarelo {
+  color: #fad928;
+}
+.card-azul {
+  color: #0000c0;
+}
+.card-marron {
+  color: #964b00;
+}
+.card-verde {
+  color: #00a100;
+}
+.card-laranja {
+  color: #ffa500;
+}
+.card-dourado {
+  color: #daa520;
+}
+.card-rosa {
+  color: #ff1493;
+}
+.card-prateado {
+  color: #c0c0c0;
+}
+.card-roxo {
+  color: #993399;
+}
+.card-bege {
+  color: #b9b957;
+}
+/*  display flex para as colunas*/
+.card-linha {
+  display: flex;
+
+  justify-content: center;
+}
+.card-coluna01 {
+  width: 500px;
+}
+@media screen and (width: 600px) {
+  .card-linha01 {
+    width: 700px !important;
+    background-color: #0000c0;
+  }
+
+}
+/* FIM 600px */
+.card-coluna02 {
+  width: 680px;
+}
+.card-coluna01,
+.card-coluna03,
+.card-coluna02 {
+  margin: 0 auto;
+}
+
+.card-coluna03 h2 {
+  color: #00776f;
+  text-align: center;
+}
+/* Japones com anime Index */
+#japones-com-anime-index,
+.indexh2 {
+  color: #00776f;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  width: 90%;
+  margin: 0 auto;
+}
+.indexhh2 {
+  font-size: 16px;
+}
+.logo-naruto {
+  width: 190%;
+}
+.gif-naruto-img {
+  position: relative;
+  width: fit-content;
+  width: 50%;
+  display: flex; /* torna o container um flex container */
+}
+.naruto-index {
+  position: absolute;
+  top: 50%; /* posiciona o texto no centro vertical */
+  left: 50%; /* posiciona o texto no centro horizontal */
+  transform: translate(-50%, -50%); /* centraliza o texto */
+  color: white; /* cor do texto */
+  font-size: 24px; /* tamanho da fonte */
+  font-weight: bold; /* peso da fonte */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* sombra do texto */
+}
+/* Ergoproxy banner 967 */
+.texto-ergoproxy,
+.texto-evangelion {
+  position: absolute;
+  width: 44%;
+  top: 10%;
+  left: 6%;
+  font-size: 14px;
+  background-color: rgba(0, 47, 134, 0.4);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.texto-ergoproxy:hover {
+  background-color: #23376d;
+}
+.texto-evangelion p {
+  font-size: 14px;
+}
+div.texto-ergoproxy p:nth-of-type(1) {
+  color: rgb(36, 255, 73) !important;
+  font-size: 14px;
+  /* Estilos para o segundo <p> dentro da div com a classe "texto-ergoproxy" */
+}
+div.texto-ergoproxy p:nth-of-type(2) {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  /* Estilos para o segundo <p> dentro da div com a classe "texto-ergoproxy" */
+}
+div.texto-ergoproxy p:nth-of-type(3) {
+  color: rgb(36, 255, 73);
+  font-size: 14px;
+  /* Estilos para o segundo <p> dentro da div com a classe "texto-ergoproxy" */
+}
+div.texto-ergoproxy p:nth-of-type(4) {
+  color: rgb(239, 255, 17);
+  font-size: 14px;
+}
+div.texto-ativo-ergo p:nth-of-type(1) {
+  color: #32c2b9 !important;
+  font-size: 15px;
+}
+div.texto-ativo-ergo p:nth-of-type(2) {
+  color: #32c2b9 !important;
+  font-size: 15px;
+}
+div.texto-ativo-ergo p:nth-of-type(3) {
+  color: #32c2b9 !important;
+  font-size: 15px;
+}
+div.texto-ativo-ergo p:nth-of-type(4) {
+  color: #32c2b9 !important;
+  font-size: 15px;
+}
+.texto-ativo-ergo p {
+  color: #32c2b9;
+}
+
+/* .texto-ativo-ergo p {
+  color: tomato;
+} */
+.texto-evangelion {
+  background-color: rgba(0, 47, 134, 0.582);
+}
+/*  */
+
+/*Footer*/
+.footer-pagina {
+  width: 100%;
+  background-color: #00686c;
+  text-align: center;
+  padding: 30px 0; /* Adicione algum espaçamento interno ao rodapé */
+  clear: both; /* Garante que o rodapé esteja abaixo de todos os elementos flutuantes */
+}
+
+.footer-pagina .grupo-1 {
+  width: 100%; /* Reduza um pouco a largura do grupo para evitar que ele ultrapasse as bordas */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding: 45px 0;
+}
+
+/*Centralizar o logo no footer*/
+.footer-pagina .grupo-1 .box img {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/*estilizar textos*/
+.footer-pagina .grupo-1 .box h2 {
+  color: #d3d1d1;
+}
+.box p {
+  color: #d3d1d1;
+  /* font-size:80%; */
+}
+.footer-pagina .grupo-1 .box h2 {
+  color: #d3d1d1;
+  margin: 0 10px;
+
+}
+
+/*Icones redes sociais*/
+
+.footer-pagina .grupo-1 .box .rede-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #00686c;
+  margin-right: 10px;
+  align-items: center;
+  text-align: center;
+  border-radius: 7px;
+}
+
+.icone-face,
+.icone-insta,
+.icone-x,
+.icone-you {
+  fill: #32c2b9;
+}
+.icone-face:hover,
+.icone-insta:hover,
+.icone-x:hover,
+.icone-you:hover {
+  fill: #e4e114;
+}
+.footer-pagina .grupo-2 {
+  background-color: #32c2b9;
+  padding: 15px;
+  text-align: center;
+  color: #f5f5f5;
+}
+
+/* Frases " Frases Com Audio" */
+.frase {
+  color: #00686c;
+  text-align: center;
+  margin-bottom: 3px;
+  margin-top: 70px;
+}
+/* Subtitulo cards numeros no index */
+.subtitle {
+  color: #00776f;
+  text-align: center;
+}
+.box-um h3 {
+  max-width: 70%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 50%;
+  width: 90%;
+  text-align: center;
+}
+/* 600pc Footer */
+@media screen and (max-width: 600px) {
+  .footer-pagina .grupo-1 .box .rede-social a  {
+    width: 20px;
+      margin-right: 0px;
+  }
+  .box p {
+  color: #d3d1d1;
+  font-size:80%;
+}
+.footer-pagina .grupo-1 .box h2 {
+  color: #d3d1d1;
+  font-size: 12px;
+}
+.footer-pagina .grupo-1 .box img {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+}
+/*Nome " Nome Meu Amigo Totoro"*/
+.totoro p {
+  margin: 10%;
+  font-weight: bolder;
+}
+
+.img-container {
+  position: relative;
+}
+figcaption {
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo da legenda */
+  color: #fff; /*Cor do texto da legenda */
+  padding: 1px; /* Espaçamento interno da legenda */
+}
+.bt {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: #db3434;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.frase .seta-link {
+  width: 15px;
+  margin-left: 10px;
+}
+
+.player {
+  display: flex;
+  gap: 1em;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconeplaylento {
+  cursor: pointer;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  padding: 3px;
+  background-color: #32c2b9;
+}
+.iconeplaylento:hover {
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(2px);
+  font-size: 14px;
+}
+/* Botões play dos verbos */
+.iconeplaylento-verbos {
+  cursor: pointer;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  margin-left: 9px;
+  background-color: #32c2b9;
+}
+.iconeplaylento-verbos:hover {
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(2px);
+  font-size: 14px;
+}
+.play-centro .iconeplaylento {
+  width: 32px;
+}
+
+.iconeplay {
+  margin: 0 auto;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.iconeplay:hover {
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(2px);
+  font-size: 14px;
+}
+.iconeplay:active {
+  transform: translateY(4px);
+}
+.img-totoro {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* IMG naruto */
+.img-naruto {
+  position: absolute;
+  margin-left: 20px;
+  z-index: -2;
+  margin-top: 20%;
+}
+
+/*    Parte de Verbos na página index   */
+.div-verbos h3 {
+  display: flex;
+}
+aside.verbo-index {
+  justify-content: space-between;
+}
+
+.div-verbos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.verbos-01 {
+  width: 100%;
+  flex-direction: column;
+  bottom: 0;
+}
+.verbos-01 h3 {
+  color: #575757;
+}
+.verbos-01 p {
+  font-size: 14px;
+  color: #525252;
+}
+.line {
+  width: 1px;
+  height: 100px;
+  background-color: #000;
+  margin: 0 3px;
+}
+
+.verbo-index {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.sinal-mais {
+  font-size: 18px;
+}
+/* imagem da seta */
+#buttonMostrar img,
+#buttonMostrar02 img,
+#buttonMostrar03 img {
+  width: 15px;
+  height: 15px;
+  margin-top: 4px;
+  margin-left: 80%;
+}
+
+span.sinal-mais {
+  display: flex;
+}
+#buttonMostrar,
+#buttonMostrar02,
+#buttonMostrar03 {
+  background: #0b8e92;
+  border: none;
+  width: 100%;
+  padding: 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  box-shadow: #055457 2px 3px 5px;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#buttonMostrar:hover::after {
+  content: "Clique aqui";
+  position: absolute;
+  /* top: 30%;  */
+  left: 20%;
+  /* transform: translateX(-50%); */
+  transform: translateY(120%);
+  background-color: rgba(116, 116, 116, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+} 
+
+#buttonMostrar02 {
+  margin-top: 2px;
+}
+#buttonMostrar,
+#buttonMostrar03 {
+  margin-top: 2px;
+}
+/* Botaão próximo seta direita */
+.seta-direita {
+  width: 30px;
+}
+
+#buttonMostrar:hover,
+ #buttonMostrar02:hover, 
+#buttonMostrar03:hover {
+  background: #18bcbe;
+}
+
+/*  Conteúdo escondido do botão mostrar explicação*/
+.texto-ativo,
+.texto-ativo-ergo {
+  padding: 10px;
+  color: rgb(56, 56, 56);
+  line-height: 2;
+  background-color: #fff;
+}
+@media (max-width: 730px){
+  .texto-ativo,
+  .texto-ativo-ergo{
+    line-height: 1.5;
+  }
+}
+.azul-anil {
+  color: #32c2b9;
+}
+#mostrarFrases {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background-color: #fff;
+  border-radius: 5px;
+}
+/* Botão */
+
+#mostrar,
+#mostrar02,
+#mostrar03 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  box-shadow: 2px 2px 5px #888888, -2px -2px 5px #cccccc;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.esconderEvangelion,
+.esconderFrase,
+.esconder,
+.esconder01,
+.esconder03 {
+  max-height: 0;
+}
+#mostrarErgo,
+#mostrarEvangelion {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  box-shadow: 2px 2px 5px #888888, -2px -2px 5px #cccccc;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.esconder {
+  max-height: 0;
+}
+
+/* ------ fim pagina index */
+
+/* ############ Estilo da pagina Katakana ###### */
+
+.card-katakana h2 {
+  color: #055457;
+  font-size: 1.5em;
+  width: 280px;
+}
+.pg-katakana {
+  background-color: #00686c;
+}
+/* CENTRALIZAR o conteudo */
+.cards-katakana {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 1vh;
+  margin: 0 auto;
+  height: 1px;
+}
+
+aside.cards-katakana section.card-katakana {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #32c2b8d5;
+  border-radius: 5px;
+  height: 2%;
+  width: 95%;
+  box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+  padding: 100px 140px;
+  z-index: 3;
+}
+
+aside.cards-hiragana section.card-hiragana:first-child {
+  background-color: #fada28b6;
+  margin-left: 0;
+  min-width: 250px;
+  margin: 0px;
+}
+
+aside.cards-hiragana section.card-hiragana h2 {
+  margin: 16px 45px;
+  font-size: 100%;
+  margin: 6px;
+}
+
+/*------- fim pagina katakana*/
+/* ############################################## */
+/* ESTILO DA PAGINA hiragana */
+
+/*Primeiro card*/
+
+/*Cor do texto cards*/
+.card-hiragana h2 {
+  color: #055457;
+}
+.pg-hiragana {
+  background-color: #00686c;
+}
+/* CENTRALIZAR o conteudo */
+.cards-hiragana {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 1vh;
+}
+
+aside.cards-hiragana section.card-hiragana {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #32c2b8d5;
+  border-radius: 5px;
+  height: 2%;
+  width: 80%;
+  margin-left: 20px;
+  box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+  padding: 100px 140px;
+  z-index: 3;
+}
+
+aside.cards-hiragana section.card-hiragana:first-child {
+  background-color: #fada28b6;
+  margin-left: 0;
+  min-width: 250px;
+  margin: 0px;
+}
+
+aside.cards-hiragana section.card-hiragana h2 {
+  margin: 16px 45px;
+  font-size: 100%;
+  margin: 6px;
+}
+
+/* Link dos CARDS */
+.card-hiragana-footer-1 a {
+  position: relative;
+  text-decoration: none;
+  margin: 2px 20px;
+  display: flex;
+  color: #4d4d4d;
+  font-weight: 600;
+  background-color: #53ccc3;
+  border-radius: 5px;
+  padding: 15px 115px 10px 115px;
+  margin-top: 10px;
+}
+
+.hiragana {
+  /* Estilo do texto dos cards*/
+  justify-content: center;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 0.2rem;
+  padding-top: 1px;
+  margin-top: 1px;
+}
+
+.hiragana .a {
+  background-color: #00686c;
+  color: #fcfcfc;
+  align-items: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding-top: 1px;
+}
+
+.i,
+.u,
+.e,
+.o,
+.r {
+  color: #00686c;
+  background-color: aliceblue;
+  border-radius: 50%;
+  padding-bottom: 3px;
+  width: 30px;
+  height: 30px;
+  padding-top: 1px;
+}
+
+/* kanji capa transparente */
+.hiragana .kanji-a {
+  background-color: #00686c;
+  color: #fcfcfc;
+  align-items: center;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px; /* Ajuste conforme necessário */
+  display: flex;
+  justify-content: center; /* Alinhamento horizontal */
+  align-items: center; /* Alinhamento vertical */
+}
+.kanji-i,
+.kanji-u,
+.kanji-e,
+.kanji-o,
+.kanji-r {
+  color: #00686c;
+  background-color: aliceblue;
+  border-radius: 50%;
+  padding-top: 3px;
+  width: 45px;
+  height: 45px; /* Ajuste conforme necessário */
+  display: flex;
+  justify-content: center; /* Alinhamento horizontal */
+  align-items: center; /* Alinhamento vertical */
+}
+.container-conteudo {
+  background-color: #ffe75f;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7em;
+}
+.container-conteudo .container-titulo h2 {
+  color: #00686c;
+  font-size: 1.4em;
+  display: block;
+  text-align: center;
+}
+.container-titulo h2 {
+  font-size: 0.3em;
+}
+
+.container-hiragana-p {
+  color: #636363;
+
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 40px auto;
+}
+/* TABELA HIRAGANA*/
+.tabela-hiragana2 {
+  border-collapse: collapse;
+  color: #fff;
+}
+.tabela-hiragana2 td,
+th {
+  background-color: #1a9b92d5;
+  padding: 3px;
+  border: 2px solid #fcfcfc;
+}
+.section-hiragana {
+  color: #636363;
+}
+.hiragana2 td {
+  font-size: 1.2em;
+}
+
+.tabela-hiragana {
+  width: 50%;
+  border-collapse: collapse;
+  color: #00686c;
+  margin: 0 auto;
+  border: #00686c;
+}
+#tabela-combinacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.hiragana-combinacoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.section-hiragana {
+  width: 80%;
+  margin: 30px auto;
+}
+.hiragana2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+/* iconde seta para cima */
+.seta-para-cima img {
+  display: flex;
+  width: 50px;
+  float: right;
+  margin-right: 30px;
+  margin-bottom: 10px;
+  left: 0px;
+  cursor: pointer;
+}
+/* Efeito da seta na vertical */
+
+.seta-para-cima-index {
+  position: absolute;
+  margin-top: -60px;
+  right: 0;
+  z-index: 5;
+}
+.seta-para-cima {
+  animation: balanco-vertical 0.5s infinite alternate;
+}
+@keyframes balanco-vertical {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+@media screen and (max-width: 730px) {
+  .tabela-hiragana {
+    min-width: 90%;
+  }
+  #tabela-combinacoes {
+    width: 90%;
+  }
+  .section-hiragana {
+    width: 95%;
+  }
+}
+.tabela-hiragana th {
+  background-color: #fff;
+  border: 1px solid #008ea7;
+}
+#tabela-combinacoes {
+  display: flex;
+  gap: 2em;
+  width: 95%;
+}
+.tabela-hiragana td {
+  padding: 10px;
+}
+.tabela-hiragana th:first-child {
+  background-color: #00686c;
+  color: #fff;
+}
+.tabela-hiragana tr:nth-child(2n + 1) {
+  background-color: #00696c31;
+}
+/* Botão download da Tabela Hiragana e katakana */
+.download-button {
+  /* background-color: #fad928;  */
+  /* Cor de fundo do botão */
+  display: flex;
+  margin: 2em auto;
+  background-color: #00686c;
+  padding: 10px 20px;
+  font-weight: 500; /* Espaçamento interno do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Sem borda */
+  border-radius: 20px; /* Borda arredondada */
+  cursor: pointer; /* Cursor do mouse */
+  transition: background-color 0.2s ease; /* Transição de cor ao passar o mouse */
+}
+.download-button a {
+  color: yellow;
+}
+.download-button:hover {
+  background-color: #0eb4b9; /* Cor de fundo do botão ao passar o mouse */
+}
+/* iframa pdf */
+iframe {
+  width: 50%;
+  height: 100vh;
+}
+/* Imagem Tabela Hiragana */
+.img-tabela-hira {
+  display: flex;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container-conteudo p:nth-child(4) {
+  /*  Quarto elemento filho*/
+  margin-top: -80px;
+  padding-top: 0;
+}
+
+span.dakuten {
+  font-size: 24px;
+}
+.btn-final {
+  width: 180px;
+}
+.btn-final a {
+  background-color: #e4e114;
+  color: #00686c;
+  text-decoration: none;
+  border-radius: 15px;
+  line-height: 28px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.btn-final a:hover {
+  background-color: #4ac4dab4;
+}
+.botao-katakana {
+  display: flex;
+  width: 180px;
+  margin: 0 auto;
+}
+/* Pagina Katakana  600 px*/
+.cards-katakana {
+  height: 60px;
+}
+/*------- FIM DO ESTILO HIRAGANA  */
+
+/* ############################################## */
+/* ESTILO DA PAGINA particulas */
+.container-particulas {
+  background-color: #fad928;
+  width: 100%;
+  height: 250px;
+  margin-top: 8%;
+}
+#particulas-grupo h3 {
+  text-align: center;
+}
+
+.container-particulas01 {
+  margin-top: -53px;
+  align-items: center;
+  text-align: center;
+}
+.card-particulas p {
+  color: #05979c;
+  text-align: center;
+}
+.bt {
+  position: absolute;
+  left: 30%;
+}
+.linha-particula {
+  width: 80%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+.card-particulas {
+  margin-top: -20px;
+  position: relative;
+  top: -60px;
+  margin: 1%;
+  height: 180px;
+  border-radius: 5px;
+  border: solid 1px #32c2b9;
+  width: 50%;
+  background-color: #fff;
+}
+
+#azul {
+  color: #4b4bec;
+}
+#verde {
+  color: #04ac04;
+}
+#roxo {
+  color: #ff00ff;
+}
+#laranja {
+  color: #ff8e16;
+}
+.laranjaEvangelion {
+  font-size: 14px;
+}
+#vermelho {
+  color: #fc1111;
+}
+#vermelho {
+  color: #c40404;
+}
+
+#verde-fraco,
+.verde-fraco {
+  color: #00686c;
+}
+#verde-forte {
+  color: #025255;
+}
+#azul-fraco {
+  color: #00b9bc;
+}
+#particula-central {
+  margin: 0 auto;
+  position: relative;
+}
+.h2-particulas {
+  margin-bottom: 3%;
+}
+
+/* conteudo de TEXTOS na página Partículas*/
+#particula-central p {
+  line-height: 1.8; /*   Distanciamento das linhas*/
+  width: 70%;
+  margin: 0 auto;
+  color: #686767;
+  position: relative;
+}
+.topico-particula {
+  /*  Titulo para cada Partícula 1° 2° 3°*/
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #00686c;
+}
+.img-naruto-particulas img {
+  width: 15%;
+  position: absolute;
+  left: 13%;
+  top: 1px;
+}
+.mark {
+  background-color: #0000c0;
+}
+/*  Exemplos de partículas  */
+.frase-wa {
+  white-space: nowrap; /* Mantém a frase na mesma linha */
+  text-align: center;
+  font-size: 1.2em;
+}
+.frase-wa p {
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/*------- fim pagina particulas*/
+
+/* ############################################## */
+/* ESTILO DA PAGINA sentencas */
+.card-sentencas h2 {
+  color: #055457;
+}
+
+/* CENTRALIZAR o conteudo */
+.cards-sentencas {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 1vh;
+}
+
+aside.cards-sentencas section.card-sentencas {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #32c2b8d5;
+  border-radius: 5px;
+  height: 2%;
+  width: 80%;
+  margin-left: 20px;
+  box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+  padding: 100px 140px;
+  z-index: 3;
+}
+/*---------  Fim pagina sentencas*/
+
+/* ############################################## */
+
+/* ESTILO DA PAGINA frases */
+.secao-frases {
+  margin-top: 1px;
+}
+.frases-head {
+  margin-top: 30px;
+}
+.frase-topo {
+  background-color: #00686c;
+}
+
+/* Efeito Slide Cards FRASES e verbos */
+
+/* -----  fim pagina frases */
+
+/*########## Pagina Japones com anime*/
+
+.container-anime-titulo h2:first-of-type {
+  color: #00686c;
+  font-size: 2em;
+  margin-top: 6%;
+}
+.container-anime-titulo h2:nth-of-type(2) {
+  color: #05979c;
+}
+.container-anime-titulo h2:nth-of-type(3) {
+  color: #00686c;
+}
+.container-anime h2 {
+  color: #05979c;
+}
+.container-anime h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*  Painel de animes */
+.painel {
+  position: relative;
+  background-color: #fad928;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  margin-top: 20%;
+  padding-bottom: 90px;
+  justify-content: center;
+}
+/* Segunda linha de cards circulos*/
+.painel2 {
+  margin-top: -5%;
+  height: 350px;
+  width: 100%;
+  display: flex;
+  padding-bottom: 90px;
+  justify-content: center;
+}
+.pmenor {
+  font-size: 0.7em;
+}
+/* Cards do painel amarelo*/
+
+.card-circulo {
+  margin: 0 3%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.card-circulo img {
+  margin-top: -40%;
+  border-radius: 50%;
+  border: 3px solid #32c2b9;
+  display: inline-block;
+  align-items: center;
+  border-radius: 50%;
+  width: 87%;
+  height: 70%;
+  position: relative;
+  margin-bottom: auto;
+}
+.card-circulo:hover {
+  transform: scale(1.1);
+}
+.card-quadrado {
+  display: grid;
+  margin-top: -20%;
+  background-color: #32c2b9;
+  border: solid 3px #fff;
+  border-radius: 8px;
+  width: 70%;
+  height: 50%;
+  top: -13%;
+  position: relative;
+  left: 50%;
+}
+.card-quadrado:hover {
+  box-shadow: 2px 5px 5px #00000083;
+}
+.card-quadrado p {
+  color: #fff;
+}
+.card-quadrado p:hover .card-quadrado:hover {
+  color: #d83434;
+}
+.video-youtube01 {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.video-youtube01 iframe {
+  width: 45%;
+  margin: 0 auto;
+}
+.video-paragrafo {
+  width: 40%;
+
+  margin: 0 auto;
+}
+.video-p {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #464646 !important;
+}
+.video-youtube01 p {
+  color: #4d4d4d;
+}
+
+/** ------  fim pagina aprender com anime/
+
+
+/*############# Pagina Cards*/
+aside.cards-pagina {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+aside.cards-pagina section.card-pagina {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+  height: 25px;
+  margin-top: -10px;
+  width: 90%;
+  box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+  padding: 100px 40px;
+  background-color: #32c2b8d5;
+  z-index: 3;
+}
+.card-body-pagina {
+  width: 300px;
+}
+.card-body-pagina h2 {
+  color: #00686c;
+}
+.card-body-pagina img {
+  width: 20%;
+}
+/*------ fim Pagina Cards*/
+
+/*######## Pagina Kanji*/
+
+@media (max-width: 730px) {
+  .item {
+    display: none;
+  }
+  .logo img {
+    width: 120px;
+    float: left;
+  }
+  .login-button {
+    display: none;
+  }
+  /* Ergoproxy banner 730 */
+  .texto-ergoproxy {
+    position: absolute;
+
+    width: 50%;
+    top: 10%;
+    left: 6%;
+
+    font-size: 12px;
+    /* rgb(0, 89, 255) */
+    background-color: rgba(0, 89, 255, 0.705);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  /* Samurai x banner */
+
+  .verde-fraco-mobile {
+    color: #41ff5a;
+    font-size: 14px;
+  }
+
+  .cinza-escuro-mobile {
+    color: yellow;
+  }
+  .mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+    transition: display 0.3s ease-in-out, padding-top 0.3s ease-in-out,
+      background-color 0.3s ease-in-out, padding-bottom 0.3s ease-in-out,
+      margin-top 0.3s ease-in-out;
+    transition-delay: 0.3s;
+  }
+  .mobile-menu .item {
+    padding-top: 1.2rem;
+    background-color: #00686c;
+    padding-bottom: 30px;
+    margin-top: 0;
+  }
+  .mobile-menu .login-button {
+    padding: 1rem 2rem;
+    background-color: #00686c;
+    margin-top: 0;
+  }
+  .mobile-menu .login-button button {
+    width: 100%;
+  }
+  .open {
+    display: block;
+  }
+
+  /* Menu Amburger */
+  .menu {
+    position: fixed;
+    top: -50%; /* Esconde o menu inicialmente acima do topo da tela */
+    right: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #00696c9a;
+
+    padding-top: 60px; /* Altura do cabeçalho (ajuste conforme necessário) */
+    transition: top 0.3s ease; /* Adiciona um efeito de transição suave */
+    z-index: 4;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .login-button {
+    display: block;
+  }
+
+  .logo {
+    display: flex;
+    z-index: 10;
+    flex-direction: column;
+  }
+
+  .menu li {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .menu a {
+    text-decoration: none;
+    padding: 5px 0;
+    color: #fff;
+    display: block;
+    transition: background-color 0.5s; /* Adiciona um efeito de transição suave */
+  }
+
+  .menu a:hover {
+    color: #fad928;
+    width: 300px;
+
+    align-items: center;
+  }
+  .login-button {
+    display: none;
+  }
+  .hamburger {
+    font-size: 24px;
+    cursor: pointer;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    color: #e1ff35;
+    display: block;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
+
+  #menu-toggle:checked + .hamburger + .menu {
+    top: 0; /* Mostra o menu quando a caixa de seleção está marcada */
+  }
+
+  /* Página cards  730 px */
+  .container-card-categoria {
+    width: 95%;
+  }
+  .card-coluna01 {
+    width: 95%;
+  }
+  .card-coluna01 .card-linha {
+    width: 95%;
+  }
+  .card-coluna02 .card-linha {
+    width: 95%;
+  }
+  .card-coluna02 {
+    width: 90%;
+  }
+  .card-coluna03 .card-linha {
+    width: 110%;
+  }
+  /* PLAY do card Meses */
+  #playCard {
+    display: flex;
+    position: absolute;
+    margin-top: -15px;
+  }
+  /* #playCard {
+    position: absolute;
+    margin-left: 75px;
+    margin-top: -18px;
+  } */
+  .card-semana {
+    width: 95%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .play-menor {
+    width: 25px;
+    height: 25px;
+  }
+  .secao-pprofissao-frases {
+    width: 80%;
+  }
+  /* 730px */
+  .topico-radius {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #1eff00a8;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  }
+  .topico-radius:hover {
+    width: 155px;
+    height: 155px;
+  }
+  .circulo-imagem {
+    height: 130px;
+    width: 130px;
+  }
+  .banner-samurai-x {
+    height: 250px !important;
+    background-color: #0000c0;
+  }
+}
+/* Cards Radius 540 */
+@media screen and (max-width: 540px) {
+  /* Pagina frases */
+  .secao-frases {
+    margin-top: 4px;
+  }
+  .frases-head {
+    margin-top: 70px !important;
+  }
+
+  /* .secao-frases {
+    background-color: #00686c;
+  } */
+  /* .secao-frases {
+    margin-top: 1px;
+  }
+  .frases-head {
+    margin-top: 80px;
+  } */
+  .topico-radius {
+    font-size: 15px;
+    display: flex;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+  }
+  .radius-p1 p,
+  .radius-p2 p,
+  .radius-p3 p,
+  .radius-p4 p {
+    font-size: 12px;
+  }
+  .topico-radius:hover {
+    width: 125px;
+    height: 125px;
+  }
+  .verbos-radius-index {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    /* Colunas automáticas com largura mínima de 250px */
+    /* Espaçamento entre os itens */
+
+    justify-items: center; /* Centralizar os itens horizontalmente */
+    align-items: center; /* Centralizar os itens verticalmente */
+  }
+  .secao-03-numeros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 5px;
+    padding: 10px;
+    margin: 0 2px;
+    margin-top: 10px;
+  }
+  /* samurai circulo mobile */
+  .circulo-imagem {
+    height: 110px;
+    width: 110px;
+  }
+}
+/* Media teste @ 686 */
+
+/*  aside.cards section.card-3 {
+    margin-top: -15px;
+    background-color: #0000c0;
+  } */
+@media screen and (max-width: 686px) {
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+  }
+  aside.cards section.card-3 {
+    margin-top: -1px;
+  }
+  aside.cards section.card-3 {
+    margin-top: -25px;
+    background-color: #423e00;
+  }
+  
+}
+@media (max-width: 767px) {
+  .cards {
+    flex-direction: column;
+    margin-top: 320px;
+  }
+  aside.cards section.card-1 {
+    margin-bottom: 5em;
+  }
+  /*  Largura dos cards*/
+  aside.cards section.card {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #32c2b8d5;
+    border-radius: 5px;
+    padding: 120px 160px;
+    width: 90%;
+    box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    margin-bottom: 52px;
+    margin-left: 0px;
+  }
+  /* card no banner Ergo Proxy */
+  .texto-ergoproxy {
+    font-size: 14px;
+    width: 50%;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .texto-ergoproxy p {
+    font-size: 14px;
+  }
+  .texto-ergoproxy-pdois {
+    font-size: 10px;
+  }
+  div.texto-ativo-ergo p:nth-of-type(1) {
+    color: #32c2b9 !important;
+    font-size: 14px;
+  }
+  div.texto-ativo-ergo p:nth-of-type(2) {
+    color: #32c2b9 !important;
+    font-size: 14px;
+  }
+  div.texto-ativo-ergo p:nth-of-type(3) {
+    color: #32c2b9 !important;
+    font-size: 14px;
+  }
+  div.texto-ativo-ergo p:nth-of-type(4) {
+    color: #32c2b9 !important;
+    font-size: 14px;
+  }
+  div.texto-ativo-ergo p:nth-of-type(5) {
+    color: #32c2b9 !important;
+    font-size: 14px;
+  }
+  div.texto-ativo-ergo p:nth-of-type(6) {
+    color: #32c2b9 !important;
+    font-size: 14px;
+  }
+  div.texto-ativo-ergo p:nth-of-type(7) {
+    color: #32c2b9 !important;
+    font-size: 14px;
+  }
+  .texto-ativo-ergo p {
+    color: #32c2b9;
+  }
+
+  @media screen and (max-width: 686px) {
+    aside.cards section.card {
+      margin-bottom: 22px;
+    }
+  }
+
+  /*  Espaçamento entre cards*/
+  aside.cards {
+    margin-top: 10px;
+    gap: 20px;
+  }
+
+  /* Container de 3 Textos*/
+
+  .container-texto {
+    padding-top: -20%;
+    margin-top: -90%;
+    display: inline-block;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+  }
+
+  /* largura do texto  1 2 3 index  */
+
+  /* container totoro      no 500px*/
+  .container-box {
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    max-width: ;
+  }
+
+  .box-um {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+  }
+  .box-um h3 {
+    padding-top: 20px;
+    color: #32c2b9;
+    font-size: 1.2em;
+  }
+  .box-um p {
+    font-size: 14px;
+    line-height: 1.7em;
+    text-align: center;
+    color: #636363;
+  }
+  .box-um em {
+    color: #000;
+    font-size: 0.8em;
+    margin-left: 35%;
+  }
+  .img-container {
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .box-dois {
+    width: 100%;
+  }
+  div.link-texto {
+    justify-content: space-between;
+  }
+  /* Parte de Media 767 verbos e conjugações */
+  /*Parte de verbos*/
+  .verbo-index {
+    margin-top: 1%;
+  }
+  .div-verbos {
+    margin-top: 10%;
+  }
+  aside.verbo-index .div-verbos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+  }
+  .box-um h3 p {
+    font-size: 14px;
+  }
+  .frase {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  /* Subtitle do cards indes numeros */
+  .subtitle {
+    font-size: 0.8em;
+    color: #00776f;
+  }
+  .frase .seta-link {
+    width: 10px;
+    margin-left: 10px;
+  }
+
+  aside.cards section.card:first-child {
+    margin-bottom: 50px;
+    width: 90%;
+  }
+}
+ 
+/* Vwebos radius index */
+@media screen and (max-width: 800px) {
+  .radius-p1,
+  .radius-p2,
+  .radius-p3,
+  .radius-p4 {
+    font-size: 16px;
+  }
+}
+/* banner samurai x 640 */
+@media screen and (max-width: 640px) {
+  .circulo-imagem {
+    height: 140px;
+    width: 140px;
+  }
+  .banner-samurai-x {
+    height: 300px;
+  }
+}
+
+/* @media (max-width: 600px) {
+  .card-coluna01 {
+    width: 90%;
+  }
+} */
+/*  Menor que  500px*/
+@media screen and (max-width: 600px) {
+  aside.verbo-index .div-verbos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    font-size: 14px;
+  }
+  .secao-numero-index span {
+    font-size: 12px;
+  }
+  .secao-verbo-fazer span {
+    font-size: 15px;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  /* Menu suprior responsivo*/
+  nav {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .nav-bar {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .logo {
+    margin-left: 15px;
+  }
+  /*    esconder capa banner no Mobile*/
+  #banner-pc {
+    display: none;
+  }
+  #banner-mobile {
+    display: flex;
+  }
+  /* frase banner AprenderJaponês */
+  h1.texto-banner.frase-banner {
+    font-size: 20px;
+    top: 54%;
+  }
+  /* CAPA   livro */
+
+.capa-span a{
+  background-color: #e2f0ff;
+ padding: 10px;
+}
+
+    /* CAPA   livro */
+.capa-span {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  border: 1px solid #a1a1a1;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  width: 95%;
+  margin: 15px auto;
+  justify-content:space-between;
+  background-color: #f8ffff;
+  border-radius: 6px;
+  padding: 10px;
+  gap: 5px;
+
+}
+
+.capa-livro {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width: 90%;
+}
+
+  aside.cards {
+    margin-top: 30px;
+  }
+  section.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  section.card .aside.cards {
+    width: 10px;
+  }
+
+  aside.cards section.card-3 {
+    margin-top: -15px;
+    background-color: #c03d00;
+  }
+  section.card .card-footer-1 a {
+    background-color: #19ada4;
+    color: #fad928;
+  }
+  section.card .card-footer-1 a,
+  section.card .card-footer-2 a,
+  section.card .card-footer-3 a {
+    padding: 15px 100px 10px 100px;
+
+    border-radius: 25px;
+  }
+  /* .card-footer-2 a {
+    text-decoration: none;
+    margin: 2px 1px;
+    display: flex;
+    color: #4d4d4d;
+    font-weight: 600;
+
+    padding: 30px 90px 5px 0px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  } */
+  .cards {
+    flex-direction: column;
+    margin-top: 320px;
+  }
+  /*  Largura dos cards*/
+  aside.cards section.card {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #3db4acd5;
+    border-radius: 5px;
+    padding: 120px 160px;
+    width: 90%;
+    box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+    margin-bottom: 32px;
+    margin-left: 0px;
+  }
+/* CARD amarelo tpo index */
+  aside.cards section.card:first-child {
+    background-color: #fada28b6;
+    margin-left: 0px;
+    width: 90%;
+    margin-bottom: 28px;
+  }
+  /*  Espaçamento entre cards*/
+  aside.cards {
+    margin-top: 10%;
+    gap: 20px;
+  }
+  aside.cards section.card h2 {
+    font-size: 100%;
+    margin: 6px;
+  }
+  aside.cards section.card {
+    margin-bottom: 10px;
+  }
+  aside.cards section.card-3 {
+    margin-bottom: 0px;
+  }
+  /* Container de 3 Textos*/
+
+  #secao-index {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 95%;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    gap: 2px;
+    margin-bottom: 0px;
+  }
+  .container-box {
+    width: 98%;
+  }
+  .container-texto {
+    padding-top: -20%;
+    margin-top: -90%;
+    display: inline-block;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+  }
+  div.container-link {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 90px;
+    gap: 20px;
+  }
+  div.container-link:last-child {
+    margin-top: 60px;
+  }
+  div.container-link p:nth-of-type(2) {
+    margin-top: 40px;
+  }
+  div.container-link:first-child {
+    margin-bottom: -30px;
+  }
+  .container-link:last-child {
+    margin-bottom: 15%;
+  }
+  /* Link TEXTo saber mais 600px */
+  .link-texto {
+    margin-top: 6%;
+  }
+  .container-link {
+    width: 90%;
+  }
+
+  /* largura do texto  1 2 3 index  */
+  .first-letter-styling {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+  .link-inicio {
+    padding-bottom: 90px;
+    gap: 30px;
+  }
+  .link-meio {
+    margin-top: 4em;
+  }
+  .secao-index {
+    gap: 20px;
+  }
+  /* container totoro      no 500px*/
+  .container-box {
+    display: block;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+
+  .box-um h3 {
+    padding-top: 20px;
+    color: #32c2b9;
+    font-size: 1em;
+  }
+  .box-um p {
+    font-size: 0.9em;
+    line-height: 1.7em;
+    text-align: center;
+    color: #636363;
+  }
+  .box-um em {
+    color: #000;
+    font-size: 0.8em;
+    margin-left: 35%;
+  }
+  .box-dois {
+    width: 100%;
+  }
+  div.link-texto {
+    justify-content: space-between;
+  }
+
+  /* numeros index 600px */
+  .secao-03-numeros-index {
+    margin: 0px;
+  }
+  /*Parte de verbos*/
+
+  /*Parte de verbos*/
+  .verbo-index {
+    margin-top: 1%;
+  }
+  /* PAGINA cards 600 */
+
+  .container-card-categoria {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+  .card-coluna01 {
+    width: 110%;
+  }
+  .card-coluna02,
+  .card-coluna03 {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .container-link p {
+    margin-bottom: -30px;
+  }
+
+  div.texto-ergoproxy p:nth-of-type(2) {
+    color: #ffffff !important;
+    font-size: 14px;
+    /* Estilos para o segundo <p> dentro da div com a classe "texto-ergoproxy" */
+  }
+  div.texto-ativo-ergo p:nth-of-type(2) {
+    color: #32c2b9 !important;
+  }
+  .azul-anil {
+    color: #32c2b9;
+  }
+}
+/* Samurai banner 500 */
+@media (max-width: 500px) {
+  .circulo-imagem {
+    height: 110px;
+    width: 110px;
+  }
+
+  .box-um p {
+    font-size: 3.3vw;
+  }
+  .banner-samurai-x {
+    height: 300px;
+    background-color: #0000c0;
+  }
+  .texto-ergoproxy p {
+    font-size: 8px;
+  }
+  #btnErgoproxyMostrar p {
+    font-size: 11px;
+  }
+  #btnEvangelionMostrar span {
+    font-size: 11px;
+  }
+  div.texto-ergoproxy p:nth-of-type(4) {
+    font-size: 11px;
+  }
+  /* CARD amarelo tpo index */
+  aside.cards section.card:first-child {
+    margin-bottom: 22px;
+  }
+  /*  Espaçamento entre cards*/
+  aside.cards {
+    margin-top: 10%;
+    gap: 20px;
+  }
+  aside.cards section.card h2 {
+    font-size: 100%;
+    margin: 6px;
+  }
+  aside.cards section.card {
+    margin-bottom: 6px;
+  }
+}
+/* samurai banner 400 */
+@media (max-width: 400px) {
+  .circulo-imagem {
+    height: 90px;
+    width: 90px;
+  }
+  .banner-samurai-x {
+    height: 250px;
+    background-color: #0000c0;
+  }
+  .frase-banner {
+    font-size: 15px !important;
+  }
+
+}
+
+@media (max-width: 361px){
+ /* CARD amarelo tpo index */
+ aside.cards section.card:first-child {
+  margin-bottom: 15px;
+}
+/*  Espaçamento entre cards*/
+aside.cards section.card h2 {
+  font-size: 100%;
+  margin: 1px;
+}
+aside.cards section.card {
+  margin-bottom: 1px;
+}
+
+}
+
+ 

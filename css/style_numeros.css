@@ -1,0 +1,45 @@
+aside.cards-katakana section.card-katakana {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #32c2b8d5;
+  border-radius: 5px;
+  height: 2%;
+  width: 95%;
+  box-shadow: 0px 1px 6px 0.5px rgba(0, 0, 0, 0.7);
+  padding: 100px 140px;
+  z-index: 3;
+}
+.img-numero-icone{
+    display: flex;
+    justify-content: center;
+}
+/* Pegar a segunda COLUNA  */
+.secao-frases.secao-03-numeros.frases-head {
+  display: flex; /* Utilize flexbox para alinhar os elementos */
+}
+
+.secao-frases.secao-03-numeros.frases-head > .secao-numero-index.secao-frases.frase-topo:first-child {
+  width: 70%; /* Defina a largura do primeiro elemento como 70% */
+}
+
+.secao-frases.secao-03-numeros.frases-head > .secao-numero-index.secao-frases.frase-topo:last-child {
+  width: 30%; /* Defina a largura do segundo elemento como 30% */
+  background: #515555d5; 
+}
+@media screen and (max-width: 729px) {
+  .secao-frases.secao-03-numeros.frases-head {
+    flex-direction: column;
+  }
+  .secao-frases.secao-03-numeros.frases-head > .secao-numero-index.secao-frases.frase-topo:first-child {
+    width: 100%;
+  }
+  .secao-frases.secao-03-numeros.frases-head {
+    width: 100%;
+  }
+  .secao-frases.secao-03-numeros.frases-head > .secao-numero-index.secao-frases.frase-topo:last-child{
+    width: 100%;
+  }
+}

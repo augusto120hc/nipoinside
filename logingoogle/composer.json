@@ -1,0 +1,20 @@
+{
+    "name": "admin/logingoogle",
+    "autoload": {
+        "psr-4": {
+            "Admin\\Logingoogle\\": "src/",
+            "Google\\": "vendor/google/apiclient/src/",
+            "App\\Session\\": "app/Session/"
+        }
+    },
+    "authors": [
+        {
+            "name": "augusto",
+            "email": "augustoramos120@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "*"
+    }
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="elemento">Passe o mouse aqui</div>
+  <style>
+  .elemento {
+     position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer; 
+    
+    
+  }
+  
+  .elemento:hover::after {
+    content: "Nome do Elemento";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+</style>
+</body>
+</html>

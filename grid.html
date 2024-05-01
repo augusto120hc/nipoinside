@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ggrid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0; /* Remove margens padrão do body */
+      }
+
+      .container-particulas-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 5px;     
+        padding: 0px;
+        margin: 20px auto 0;
+        width: 90%; 
+      }
+      .card {
+        width: 100%; /* Largura total dos cards */
+        height: auto; /* Altura automática dos cards */
+        background-color: aqua;
+        display: flex;
+        padding: 10px 20px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-particulas-cards">
+      <div class="card">
+        <p>
+          Texto 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Provident rerum deserunt, blanditiis porro quod, ipsum necessitatibus
+          cupiditate quo fuga aliquid labore illo adipisci quisquam fugit
+          expedita dignissimos quae officia mollitia. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Deserunt molestiae repudiandae neque
+          quia est doloremque? Quos, dignissimos ut temporibus quae sed minus,
+          commodi nostrum enim perferendis quia nesciunt vitae ea.
+        </p>
+      </div>
+
+      <div class="card">
+        <p>Texto 1</p>
+      </div>
+      <div class="card">
+        <p>Texto 1</p>
+      </div>
+      <div class="card">
+        <p>Texto 1</p>
+      </div>
+      <div class="card">
+        <p>Texto 1</p>
+      </div>
+      <div class="card">
+        <p>Texto 1</p>
+      </div>
+    </div>
+  </body>
+</html>

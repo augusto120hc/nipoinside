@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lemon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="icon" href="icons/logologon.png" type="image/x-icon">
+
+
+    <title>Cadastro</title>
+    <script>
+        function confereSenha(){
+            const senha = document.querySelector('input[name=senha]');
+            const confirmar_senha = document.querySelector('input[name=confirmar_senha]');
+
+            if (confirmar_senha.value === senha.value){
+                confirmar_senha.setCustomValidity('');
+            }else {
+                confirmar_senha.setCustomValidity('As senhas não conferem');
+            }
+        }
+    </script>
+</head>
+<body id="fundo-cadastro">
+
+      
+<form method="post" action="registro_usuario.php" enctype="multipart/form-data" id="form_cadastro">
+    <div class="label">
+        <label><h2>Cadastro</h2></label>      
+    </div>
+    <div class="label">
+        <label for="img_perfil">Foto de perfil:</label>
+        <input type="file" id="img_perfil" name="img_perfil" accept="image/*" onchange="previewImage(event)">
+    </div>
+    <div class="label">
+        <img id="preview" src="#" alt="Preview da imagem de perfil" style="display: none; border-radius: 50%; width: 100px; height: 100px;">
+    </div>
+    <div class="label">
+        <label for="nome">Nome:</label>
+        <input type="text" required id="nome" name="nome" maxlength="150">
+    </div>
+    <div class="label">
+        <label for="email">e-mail:</label>
+        <input type="email" required id="email" name="email" maxlength="150">
+    </div>
+    <div class="label">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" minlength="8" required onchange='confereSenha();'>
+    </div>
+
+    <div class="label">
+        <label for="confirmar_senha">Confirmar Senha:</label>
+        <input type="password" id="confirmar_senha" name="confirmar_senha" minlength="8" required onchange='confereSenha();'>
+        <span id="mensagem_senha" style="color: red;"></span>
+    </div>
+    <div class="label">
+        <label for="data_nascimento">Data de nascimento:</label>
+        <input type="date" required id="data_nascimento" name="data_nascimento">
+    </div>
+    <div class="label">
+        <label for="proficiencia">Nível de japonês:</label>
+        <select id="proficiencia" name="proficiencia">
+            <option value="iniciante">Iniciante</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="avancado">Avançado</option>
+        </select>
+    </div>
+    <div class="label">
+        <label for="objetivos">Objetivos e motivações:</label>
+        <textarea id="objetivos" required name="objetivos" maxlength="150"></textarea>
+    </div>
+
+    <label for="forma_aprendizado">Forma preferida de aprendizado:</label>
+    
+    <div class="forma-aprendizado label">
+        <label for="presencial">Presencial</label>
+        <input type="radio" required id="presencial" name="forma_aprendizado" value="presencial">
+        
+        <label for="online">Online</label>
+        <input type="radio" required id="online" name="forma_aprendizado" value="online">
+    </div>
+    <input type="hidden" name="escondido" value="Formulário de cadastro">
+    
+    <button type="submit" id="btn-registrar">Registrar</button>
+</form>
+
+
+</body>
+
+<script src="js/scriptlogin.js"></script>
+
+</body>
+</html>

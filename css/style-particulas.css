@@ -1,0 +1,91 @@
+
+.card p{
+  font-size: 14px;
+}
+.iconeplaylento-particulas{
+  cursor: pointer;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  margin-right: 5%;
+  background-color: #32c2b9;
+}
+.iconeplaylento-particulas:hover {
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(2px);
+  font-size: 14px;
+}
+.iconeplay-particulas{
+  cursor: pointer;
+  box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
+  border-radius: 50%;
+  padding: 3px;
+  width: 30px;
+  height: 30px;
+  background-color: #32c2b9;
+}
+.iconeplay-particulas:hover{
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.8);
+  transform: translateY(2px);
+  font-size: 14px;
+}
+.player-particulas{
+  margin-right: 0%;
+  padding-right: 30%;
+}
+/* CONTAINER FUNDO VERDE */
+.particula01-card{
+  width: 80%;
+}
+.particula01-card p{
+  font-size: 14px;
+}
+/* conteudo de TEXTOS na página Partículas*/
+#particula-central p {
+  line-height: 1.8; /*   Distanciamento das linhas*/
+  width: 95%;
+  margin: 0 auto;
+  color: #686767;
+  position: relative;
+  font-size: 14px;
+}
+.topico-particula {
+  /*  Titulo para cada Partícula 1° 2° 3°*/
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #00686c;
+}
+.frase-wa p{
+  /* font-size: 14px; */
+}
+/* Primeiros cards da página FRASES */
+.card p{
+  color: #686767;
+}
+@media screen and (max-width: 600px){
+  .frase-wa p{
+    font-size: 14px;
+  }
+  .player-particulas{
+    margin-right: 1px;
+    padding-right: 2%;
+  }
+  .particula01-card{
+    width: 98%;
+  }
+  /* Titulo página Frases */
+  .container-anime-titulo h2:first-of-type {
+    text-align: center;
+  }
+  .container-anime-titulo h2:first-of-type {
+    font-size: 1.5em;
+  }
+  
+}

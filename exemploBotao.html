@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      #mostrar {
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+
+      .esconder {
+        max-height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="buttonMostrar">Mostrar/Esconder</button>
+    <button id="buttonOutro">Outro Botão</button>
+    <div id="mostrar">
+      Conteúdo para mostrar ou esconder. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Rem necessitatibus provident, corrupti eligendi deserunt
+      eaque amet repellendus dolor magnam velit a vel, magni cum, ad autem.
+      Ipsam reprehenderit ipsa est.
+    </div>
+
+    <script>
+      function toggleMostrar(element) {
+        element.classList.toggle("esconder");
+        if (element.classList.contains("esconder")) {
+          element.style.maxHeight = "0";
+        } else {
+          element.style.maxHeight = element.scrollHeight + "px";
+        }
+      }
+
+      const buttonMostrar = document.getElementById("buttonMostrar");
+      const buttonOutro = document.getElementById("buttonOutro");
+      const mostrar = document.getElementById("mostrar");
+
+      buttonMostrar.addEventListener("click", function () {
+        toggleMostrar(mostrar);
+      });
+
+      buttonOutro.addEventListener("click", function () {
+        // Associar o outro botão a mesma função
+        toggleMostrar(mostrar);
+      });
+    </script>
+  </body>
+</html>
